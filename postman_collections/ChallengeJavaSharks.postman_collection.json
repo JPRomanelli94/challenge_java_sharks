@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "ea5bbcfc-c978-4774-86c0-0719b5c71af6",
+		"name": "ChallengeJavaSharks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Alta_Punto_Venta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":11,\r\n\"nombre\":\"Tierra del Fuego\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/crear/pventa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"crear",
+						"pventa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_Punto_Venta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/buscar/pventa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"buscar",
+						"pventa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put_Punto_Venta",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"nombre\":\"CABA_3\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/actualizar/pventa/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"actualizar",
+						"pventa",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_Punto_Venta",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/eliminar/pventa/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"eliminar",
+						"pventa",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alta_Costo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/costos/crear?idA=1&idB=11&costo=50",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"costos",
+						"crear"
+					],
+					"query": [
+						{
+							"key": "idA",
+							"value": "1"
+						},
+						{
+							"key": "idB",
+							"value": "11"
+						},
+						{
+							"key": "costo",
+							"value": "50"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_Costo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/costos/eliminar?idA=1&idB=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"costos",
+						"eliminar"
+					],
+					"query": [
+						{
+							"key": "idA",
+							"value": "1"
+						},
+						{
+							"key": "idB",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_Costo_A",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/costos/to/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"costos",
+						"to",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alta_Acreditacion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"importe\":300.00,\r\n\"idPuntoDeVenta\":9}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/acreditaciones/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"acreditaciones",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_Acreditaciones",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/acreditaciones/buscar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"acreditaciones",
+						"buscar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_Camino_Minimo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/costos/camino/minimo?idA=11&idB=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"costos",
+						"camino",
+						"minimo"
+					],
+					"query": [
+						{
+							"key": "idA",
+							"value": "11"
+						},
+						{
+							"key": "idB",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
